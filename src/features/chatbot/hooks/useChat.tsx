@@ -21,7 +21,7 @@ export function useChat() {
 
         try {
             console.log("API_BASE_URL:", API_BASE_URL);
-
+            
             const res = await fetch(`${API_BASE_URL}/chat`, {
                 method: "POST",
                 headers: {
