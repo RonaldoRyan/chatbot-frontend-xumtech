@@ -20,7 +20,7 @@ export function useChat() {
         setMessages(prev => [...prev, newMessage]);
 
         try {
-            const res = await fetch(`${API_BASE_URL}/chat`, {
+            const res = await fetch(`${API_BASE_URL}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
