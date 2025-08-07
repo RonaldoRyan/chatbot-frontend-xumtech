@@ -5,7 +5,9 @@ import { ChatMessage } from '@/features/chatbot/types';
 export async function sendMessageToBot(message: string): Promise<ChatMessage[]> {
     const response = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+            "Content-Type": "application/json"
+         },
         body: JSON.stringify({ message }),
     });
 
