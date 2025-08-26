@@ -2,7 +2,7 @@ import PageHeader from "@/components/layout/pageHeader";
 import PageFooter from "@/components/layout/pageFooter";
 import ChatSection from "@/components/chat/chatSeccion";
 import InfoGrid from "@/components/info/infoGrid";
-import AdminDashboard from "./admin/dashboard/adminDashboard";
+import AdminDashboard from "./admin/dashboard/page";
 
 export default function HomePage() {
   return (

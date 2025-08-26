@@ -1,13 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-
-export interface Question {
-  id: number;
-  question: string;
-  aiAnswer: string;
-  createdAt: string;
-
-}
+import { Question } from  "../../../interfaces/Questions";
 
 export const useQuestions = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -44,8 +37,10 @@ export const useQuestions = () => {
 
       const data: Question[] = await response.json();
       setQuestions(data);
-    } catch (err: any) {
-      setError(err.message || "Error de conexión");
+    } catch (err: unknown) {
+      // ✅ Cambié 'any' por 'unknown' y agregué type guard
+      const errorMessage = err instanceof Error ? err.message : "Error de conexión";
+      setError(errorMessage);
       console.error("Error en fetchUnansweredQuestions:", err);
     } finally {
       setIsLoading(false);
@@ -59,3 +54,5 @@ export const useQuestions = () => {
 
   return { questions, isLoading, error, refetch: fetchUnansweredQuestions };
 };
+
+

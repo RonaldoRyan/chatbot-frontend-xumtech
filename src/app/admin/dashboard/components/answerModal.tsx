@@ -1,5 +1,5 @@
 "use client";
-import { Question } from '@/features/chatbot/hooks/useQuestions';
+import { Question } from '@/interfaces/Questions';
 
 
 interface Props {

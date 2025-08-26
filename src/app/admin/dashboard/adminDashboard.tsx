@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { useQuestions, Question } from "@/features/chatbot/hooks/useQuestions";
+import { useQuestions} from "@/features/chatbot/hooks/useQuestions";
+import { Question } from "@/interfaces/Questions";
 import QuestionsTable from "@/app/admin/dashboard/components/questionsTable";
 import AnswerModal from "@/app/admin/dashboard/components/answerModal";
 import Stats from "@/app/admin/dashboard/components/stats";

@@ -1,4 +1,4 @@
-import { Question } from "@/features/chatbot/hooks/useQuestions";
+import { Question } from "@/interfaces/Questions";
 
 export interface QuestionsTableProps {
   onSelect: (q: Question) => void;
