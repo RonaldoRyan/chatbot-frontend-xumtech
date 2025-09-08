@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chatbot - Evaluación XUMTECH",
-  description: "Chat inteligente para evaluación técnica con respuestas contextualizadas y análisis continuo.",
+  title: "Chatbot - AI Asistente",
+  description: "Chat inteligente con respuestas contextualizadas y análisis continuo.",
 };
 
 export default function RootLayout({
